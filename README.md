@@ -1,7 +1,5 @@
-# HomeKit_Integration_-for_MD2_Tuya_Thermostats_via_Homebridge
-Herschel iQ MD2 Thermostat (SmartLife/Tuya) integration to HomeKit
-
 # Herschel iQ MD2 Thermostat → HomeKit (via Homebridge / Tuya) with °F Override
+Herschel iQ MD2 Thermostat (SmartLife/Tuya) integration to HomeKit
 
 A working Homebridge configuration that exposes the **Herschel iQ MD2 Wired Thermostat** to Apple HomeKit with correctly-handled Fahrenheit temperature reporting.
 
