@@ -16,7 +16,7 @@ default, interprets thermostat temperature values as °C. The Herschel iQ MD2, w
  — so without an override, a `76°F` reading from the device gets interpreted as `76°C`, which HomeKit then converts and displays as `169°F`. Wildly wrong, and nothing 
 in the device's own UI hints at what's gone sideways.
 
-This repo documents the override schema that tells the plugin to treat the integer as Fahrenheit directly. The DP ID translation is from the on-device settings.  they are fiddly to get 
+This repo documents the override schema that tells the plugin to treat the integer as Fahrenheit directly. The DP ID translation is from the on-device settings.  They are fiddly to get 
 so here they are:
 
 ## DP ID translation for Herschel iQ MD2
@@ -55,7 +55,7 @@ The relevant fragment from `config.example.json`:
     "onGet": "temp_set_f"
 }
 ```
-onSet and onGet were the most important setting for the temperautures to render properly in HomKit.
+onSet and onGet were the most important setting for the temperautures to render properly in HomeKit.
 
 Key fields:
 
@@ -96,4 +96,4 @@ Each MD2 needing the override gets its own entry in the `deviceOverrides` array.
 
 ## Acknowledgments
 
-Built on top of `homebridge-tuya-platform` by 0x5e and contributors. The `deviceOverrides` mechanism that makes this all possible is documented (sparsely) in that plugin's repo.
+Built on top of `@0x5e/homebridge-tuya-platform` by 0x5e and contributors. The `deviceOverrides` mechanism that makes this all possible is documented (sparsely) in that plugin's repo.
