@@ -55,7 +55,7 @@ The relevant fragment from `config.example.json`:
     "onGet": "temp_set_f"
 }
 ```
-onSet and onGet were the most important setting for the temperautures to render properly in HomeKit.
+onSet and onGet were the most important setting for the temperatures to render properly in HomeKit.
 
 Key fields:
 
