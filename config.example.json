@@ -1,0 +1,67 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "XX:XX:XX:XX:XX:XX",
+        "port": 51260,
+        "pin": "XXX-XX-XXX",
+        "advertiser": "avahi"
+    },
+    "accessories": [],
+    "platforms": [
+        {
+            "name": "Config",
+            "platform": "config",
+            "port": 8581
+        },
+        {
+            "name": "Tuya",
+            "platform": "TuyaPlatform",
+            "options": {
+                "projectType": "2",
+                "accessId": "YOUR_TUYA_ACCESS_ID",
+                "accessKey": "YOUR_TUYA_ACCESS_KEY",
+                "countryCode": 1,
+                "username": "your-tuya-account@example.com",
+                "password": "YOUR_TUYA_ACCOUNT_PASSWORD",
+                "appSchema": "smartlife",
+                "deviceOverrides": [
+                    {
+                        "id": "YOUR_DEVICE_ID_HERE",
+                        "category": "wk",
+                        "schema": [
+                            {
+                                "code": "switch",
+                                "type": "Boolean",
+                                "dpid": 1
+                            },
+                            {
+                                "code": "temp_set_f",
+                                "type": "Integer",
+                                "dpid": 2,
+                                "unit": "℉",
+                                "min": 41,
+                                "max": 113,
+                                "scale": 0,
+                                "step": 1,
+                                "onSet": "temp_set_f",
+                                "onGet": "temp_set_f"
+                            },
+                            {
+                                "code": "temp_current_f",
+                                "type": "Integer",
+                                "dpid": 3,
+                                "unit": "℉",
+                                "min": 32,
+                                "max": 122,
+                                "scale": 0,
+                                "step": 1,
+                                "onGet": "temp_current_f"
+                            }
+                        ]
+                    }
+                ],
+                "debug": true
+            }
+        }
+    ]
+}
