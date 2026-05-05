@@ -1,0 +1,22 @@
+# Real Homebridge config with credentials — never commit
+config.json
+*.local.json
+.env
+.env.*
+
+# Homebridge runtime artifacts
+persist/
+accessories/
+node_modules/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs
+*.log
+homebridge.log
